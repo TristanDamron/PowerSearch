@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+    <title>PowerSearch</title>
+  </head>
+  <body>
+    <div id="content">
+      <center>
+	<h1>Welcome to PowerSearch</h1>
+	<h3>The new way to search the web!</h3>
+	<form id="search" action="/search">
+	  <input type="text" name="query"></input>
+	  <input type="submit" value="Search"></input>
+	  </br>
+	  <i>Powered by <a href="http://www.duckduckgo.com">Duck Duck Go!</a></i>
+	</form>
+      </center>
+    </div>
+    <center>
+      <div id="footer">
+	<ul>
+	  <li><a href="/">Home</a></li>
+	  <li><a href="/">About</a></li>
+	  <li><a href="/">Contact</a></li>
+	</ul>
+      </div>
+    </center>
+  </body>
+</html>

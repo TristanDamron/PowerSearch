@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static "css/search.css" %}">
+    <link rel="stylesheet" href="{{ link }}">
+    <title>PowerSearch</title>
+  </head>
+  <body>
+    <div id="header">
+      <!-- TODO fix search form -->
+      <form id="header-search" action="/search">
+	<a href="/home">PowerSearch</a>
+	<input type="query"></input>
+	<input type="submit" value="Search"></input>
+	<i>Powered by <a href="http://www.duckduckgo.com">Duck Duck Go!</a></i>
+      </form>
+      <div id="info-box">
+	<i>Source : <a href="{{ url }}">{{ url }}</a>
+	  <div></div>
+	  Related :
+	  <select onChange="window.location.href=this.value">
+	    <option>Click me to see more!</option>
+	    <!--{% for r in related %}
+	    <option value="{{ r }}">{{ r }}</option>
+	    {% endfor %}
+	    -->
+	  </select>
+	</i>
+      </div>
+    </div>
+    <div id="content">
+      {% include site %}
+    </div>
+  </body>
+</html>
